@@ -4,9 +4,13 @@ A gamified iOS app that randomly picks side quests and activities for you to com
 
 ## 🎥 Watch the Demo
 
-https://github.com/daveglouie/side-quest-bowl-ios-app/assets/SideQuestBowlTeaserIntro.mp4
+### [**▶️ Click here to watch the Side Quest Bowl teaser video**](https://github.com/daveglouie/side-quest-bowl-ios-app/blob/main/SideQuestBowlTeaserIntro.mp4)
 
-> **Note:** If the video doesn't play above, [click here to download and watch it](./SideQuestBowlTeaserIntro.mp4)
+<p align="center">
+  <a href="https://github.com/daveglouie/side-quest-bowl-ios-app/blob/main/SideQuestBowlTeaserIntro.mp4">
+    <img src="https://img.shields.io/badge/▶️_Watch_Demo-2.7MB-blue?style=for-the-badge&logo=youtube" alt="Watch Demo Video"/>
+  </a>
+</p>
 
 ## What is Side Quest Bowl?
 
