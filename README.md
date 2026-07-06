@@ -2,6 +2,12 @@
 
 A gamified iOS app that randomly picks side quests and activities for you to complete. Earn XP and Quest Coins by completing quests, level up, and track your progress!
 
+## 🎥 Watch the Demo
+
+https://github.com/daveglouie/side-quest-bowl-ios-app/assets/SideQuestBowlTeaserIntro.mp4
+
+> **Note:** If the video doesn't play above, [click here to download and watch it](./SideQuestBowlTeaserIntro.mp4)
+
 ## What is Side Quest Bowl?
 
 Side Quest Bowl helps you combat boredom by:
