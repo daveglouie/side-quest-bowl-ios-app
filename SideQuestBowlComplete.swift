@@ -330,6 +330,14 @@ class QuestManager: ObservableObject {
             userProfile = decoded
         }
     }
+
+    func clearAllData() {
+        quests = []
+        userProfile = UserProfile()
+        UserDefaults.standard.removeObject(forKey: questsKey)
+        UserDefaults.standard.removeObject(forKey: profileKey)
+        addDefaultQuestsIfNeeded()
+    }
 }
 
 // MARK: - Main App
@@ -1482,6 +1490,8 @@ struct QuestHistoryView: View {
 
 struct HelpView: View {
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var questManager: QuestManager
+    @State private var showingClearAlert = false
 
     var body: some View {
         NavigationView {
@@ -1494,6 +1504,8 @@ struct HelpView: View {
                     featuresSection
 
                     tipsSection
+
+                    debugSection
                 }
                 .padding()
             }
@@ -1506,6 +1518,14 @@ struct HelpView: View {
                         dismiss()
                     }
                 }
+            }
+            .alert("Clear All History?", isPresented: $showingClearAlert) {
+                Button("Cancel", role: .cancel) { }
+                Button("Clear Everything", role: .destructive) {
+                    questManager.clearAllData()
+                }
+            } message: {
+                Text("This will delete all quests, reset your level to 1, and clear all XP and coins. This cannot be undone!")
             }
         }
     }
@@ -1659,6 +1679,41 @@ struct HelpView: View {
                 .font(.subheadline)
                 .foregroundColor(.primary)
         }
+    }
+
+    private var debugSection: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            Text("Debug")
+                .font(.headline)
+                .fontWeight(.bold)
+                .foregroundColor(.red)
+
+            Button(action: {
+                showingClearAlert = true
+            }) {
+                HStack {
+                    Image(systemName: "trash.fill")
+                        .font(.title3)
+                    Text("Clear All History")
+                        .fontWeight(.semibold)
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.red.opacity(0.1))
+                .foregroundColor(.red)
+                .cornerRadius(10)
+            }
+
+            Text("⚠️ This will delete all quests, reset your level to 1, and clear all XP and coins.")
+                .font(.caption)
+                .foregroundColor(.gray)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(15)
+        .shadow(radius: 3)
     }
 }
 

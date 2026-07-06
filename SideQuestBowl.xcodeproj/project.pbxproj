@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,12 +11,15 @@
 		MAIN000000000000000000002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FILE000000000000000000002 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+
+
 /* Begin PBXFileReference section */
 		APP0000000000000000000001 /* SideQuestBowl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideQuestBowl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FILE000000000000000000001 /* SideQuestBowlComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideQuestBowlComplete.swift; sourceTree = "<group>"; };
 		FILE000000000000000000002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FILE000000000000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
 
 /* Begin PBXFrameworksBuildPhase section */
 		FRAM000000000000000000001 /* Frameworks */ = {
@@ -29,6 +32,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		PROD000000000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				APP0000000000000000000001 /* SideQuestBowl.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ROOT000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
@@ -37,14 +48,6 @@
 				FILE000000000000000000002 /* Assets.xcassets */,
 				PROD000000000000000000001 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		PROD000000000000000000001 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				APP0000000000000000000001 /* SideQuestBowl.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,8 +77,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
 			};
 			buildConfigurationList = CONF000000000000000000001 /* Build configuration list for PBXProject "SideQuestBowl" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -117,8 +120,9 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+
 /* Begin XCBuildConfiguration section */
-		BUILDCONFIG_DEBUG = {
+		BUILDCONFIG_DEBUG /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -176,12 +180,13 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BUILDCONFIG_RELEASE = {
+		BUILDCONFIG_RELEASE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,12 +237,13 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		TARGETCONFIG_DEBUG = {
+		TARGETCONFIG_DEBUG /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -266,7 +272,7 @@
 			};
 			name = Debug;
 		};
-		TARGETCONFIG_RELEASE = {
+		TARGETCONFIG_RELEASE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
